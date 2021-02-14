@@ -1,0 +1,5 @@
+<h3>{{'Welcome!'}} {{userName}} with id: {{userId}}
+    load with function: {{getUserName()}}</h3>
+  <button (click)="toggleButton()" [disabled]="isButtonDisabled">{{isButtonDisabled ? "Enable me" : "Disable Me" }}</button>
+  <button (click)="this.isButtonDisabled = false">Enable Button</button>
+  
