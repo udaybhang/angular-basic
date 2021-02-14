@@ -7,13 +7,19 @@ import { AbcComponent } from './abc/abc.component';
 import { PassDataInEventComponent } from './pass-data-in-event/pass-data-in-event.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
+import { InputOutputComponent } from './input-output/input-output.component';
+import { HomeComponent } from './home/home.component';
+import { RouteAdminComponent } from './route-admin/route-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AbcComponent,
     PassDataInEventComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    InputOutputComponent,
+    HomeComponent,
+    RouteAdminComponent
   ],
   imports: [
     BrowserModule,
