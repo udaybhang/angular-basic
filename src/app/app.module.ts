@@ -4,11 +4,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AbcComponent } from './abc/abc.component';
+import { PassDataInEventComponent } from './pass-data-in-event/pass-data-in-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AbcComponent
+    AbcComponent,
+    PassDataInEventComponent
   ],
   imports: [
     BrowserModule,
