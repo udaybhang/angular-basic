@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { HomeComponent } from './home/home.component';
 import { RouteAdminComponent } from './route-admin/route-admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouteAdminComponent } from './route-admin/route-admin.component';
     TwoWayBindingComponent,
     InputOutputComponent,
     HomeComponent,
-    RouteAdminComponent
+    RouteAdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
