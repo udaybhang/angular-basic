@@ -11,6 +11,7 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { HomeComponent } from './home/home.component';
 import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { LoginComponent } from './login/login.component';
+import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     InputOutputComponent,
     HomeComponent,
     RouteAdminComponent,
-    LoginComponent
+    LoginComponent,
+    NestedOberableComponent
   ],
   imports: [
     BrowserModule,
