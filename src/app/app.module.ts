@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
-
+import { ServiceModule } from "../app/service.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import { NestedOberableComponent } from './nested-oberable/nested-oberable.compo
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
