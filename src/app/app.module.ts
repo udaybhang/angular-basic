@@ -12,7 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
-import { ServiceModule } from "../app/service.module";
+
+import { ApiService } from './api.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +32,9 @@ import { ServiceModule } from "../app/service.module";
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ServiceModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

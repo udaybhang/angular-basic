@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +8,15 @@ import { FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   model: any = {};
-  loginForm: FormGroup | undefined;
+  constructor(private apiService: ApiService) {}
   logIn() {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model));
   }
   ngOnInit(): void {
+       this.apiService.get().subscribe(data =>{
+        console.log(data)
+      });
+     
   }
 
 }
