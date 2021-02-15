@@ -15,6 +15,7 @@ import { NestedOberableComponent } from './nested-oberable/nested-oberable.compo
 
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AlertService } from './alert.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
