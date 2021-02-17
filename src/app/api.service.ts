@@ -21,8 +21,12 @@ export class ApiService {
     return this.httpClient.post(this.URL + '/signUp', obj).pipe(catchError(this.errorHandler.bind(this)));
   }
 
+  loginAndSetToken(data: { email:string, password: string }): Observable<any> {
+    let queryParam = `?email=${data.email}&password=${data.password}`;
+      return this.httpClient.get(this.URL + '/login' + queryParam).pipe(catchError(this.errorHandler.bind(this)));
+}
+
   private errorHandler(response: any) {
-    console.log('response---', response)
     const error = response.error;
     const keys = Object.keys(error);
    
