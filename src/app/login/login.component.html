@@ -41,20 +41,17 @@
                       </div>
                     </div>
                     <div class="col-md-3"></div>
-                    
-      
-                 
-      
-                </div>
+                      </div>
             
             <div class="card-footer" style="text-align: center;">
                 <a href="#">Forgot password</a>
-                    <button type="submit" [disabled]="!f.valid" class="btn btn-sm btn-primary"><i class="fa fa-send-o"></i> Register</button>
                     <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
                 
              
             </div>
           </form>
+          <button type="button" [disabled]="!f.valid" (click)="logIn()" class="btn btn-sm btn-primary"><i class="fa fa-send-o"></i> Login</button>
+                    <button type="button"  (click)="register()" class="btn btn-sm btn-primary"><i class="fa fa-send-o"></i> Register</button>
         </div>
       </div>
     </div>

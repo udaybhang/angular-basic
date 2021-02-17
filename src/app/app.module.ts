@@ -16,6 +16,7 @@ import { NestedOberableComponent } from './nested-oberable/nested-oberable.compo
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { AlertService } from './alert.service';
     HomeComponent,
     RouteAdminComponent,
     LoginComponent,
-    NestedOberableComponent
+    NestedOberableComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

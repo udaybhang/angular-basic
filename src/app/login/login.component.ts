@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,9 +9,12 @@ import { ApiService } from '../api.service';
 })
 export class LoginComponent implements OnInit {
   model: any = {};
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
   logIn() {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model));
+  } 
+  register() {
+   this.router.navigate(['sign-up'])
   }
   ngOnInit(): void {
        this.apiService.get().subscribe(data =>{
