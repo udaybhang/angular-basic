@@ -12,12 +12,13 @@ import { HomeComponent } from './home/home.component';
 import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
-
+import {AuthGaurd} from '../app/gaurds/auth-gaurd';
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VerificationComponent } from './verification/verification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     LoginComponent,
     NestedOberableComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    VerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     HttpClientModule
   ],
-  providers: [ApiService, AlertService],
+  providers: [ApiService, AlertService, AuthGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
