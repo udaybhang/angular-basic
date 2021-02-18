@@ -10,6 +10,7 @@ export class AuthGaurd implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
+      console.log(route, state);
     const isLoggedIn = isPlatformBrowser(this.platformId) ? !!AuthUtil.getAuthToken() : null;
     if (isLoggedIn) {
       return true;

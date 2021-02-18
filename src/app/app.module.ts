@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
 import {AuthGaurd} from '../app/gaurds/auth-gaurd';
 import { ApiService } from './api.service';
+import { AnonGaurd } from "../app/gaurds/anon-gaurd";
 import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
 import { RegisterComponent } from './register/register.component';
@@ -41,7 +42,7 @@ import { VerificationComponent } from './verification/verification.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ApiService, AlertService, AuthGaurd],
+  providers: [ApiService, AlertService, AuthGaurd, AnonGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

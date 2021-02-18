@@ -11,15 +11,18 @@ import { AuthUtil } from "../../app/utility/auth-util";
 })
 export class LoginComponent implements OnInit {
   model: any = {};
+  loggedinData: any;
   constructor(private apiService: ApiService, private router: Router,@Inject(PLATFORM_ID) private platformId: any) {}
   logIn() {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model));
     this.apiService.loginAndSetToken(this.model).subscribe(res=>{
-        console.log(res);
+        // console.log('res==', res);
+        this.loggedinData =  res.user;
         if (isPlatformBrowser(this.platformId)) {
           AuthUtil.setAuthToken(res.token);
         }
-        return res.user;
+        this.router.navigate(['verify'], {queryParams: {email: this.loggedinData.email}})
+        
     })
   } 
   register() {

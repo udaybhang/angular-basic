@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AbcComponent } from './abc/abc.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AnonGaurd } from './gaurds/anon-gaurd';
 import { AuthGaurd } from './gaurds/auth-gaurd';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path: '', component: RouteAdminComponent, children: [
     {path: '', component: PassDataInEventComponent},
     {path: 'event-binding', component: AbcComponent},
-    {  path: 'log-in', component: LoginComponent  },
+    {  path: 'log-in', component: LoginComponent , canActivate: [AnonGaurd] },
     { path: 'sign-up', component: RegisterComponent },
     {path: 'nested-oberable', component: NestedOberableComponent},
     {path: 'forgot-password', component: ForgotPasswordComponent},
