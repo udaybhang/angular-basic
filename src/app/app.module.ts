@@ -9,7 +9,6 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { FormsModule } from '@angular/forms';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { HomeComponent } from './home/home.component';
-import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
 import {AuthGaurd} from '../app/gaurds/auth-gaurd';
@@ -28,7 +27,6 @@ import { VerificationComponent } from './verification/verification.component';
     TwoWayBindingComponent,
     InputOutputComponent,
     HomeComponent,
-    RouteAdminComponent,
     LoginComponent,
     NestedOberableComponent,
     RegisterComponent,

@@ -5,32 +5,32 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { AnonGaurd } from './gaurds/anon-gaurd';
 import { AuthGaurd } from './gaurds/auth-gaurd';
 import { HomeComponent } from './home/home.component';
+import { InputOutputComponent } from './input-output/input-output.component';
 import { LoginComponent } from './login/login.component';
 import { NestedOberableComponent } from './nested-oberable/nested-oberable.component';
 import { PassDataInEventComponent } from './pass-data-in-event/pass-data-in-event.component';
 import { RegisterComponent } from './register/register.component';
-import { RouteAdminComponent } from './route-admin/route-admin.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { VerificationComponent } from './verification/verification.component';
 
-const routes: Routes = [
-
-  {path: 'event-decorator', component: HomeComponent, children: [
-
-    {path: 'two-way', component: TwoWayBindingComponent}
-
-  ]},
-  {path: '', component: RouteAdminComponent, children: [
-    {path: '', component: PassDataInEventComponent},
-    {path: 'event-binding', component: AbcComponent},
-    {  path: 'log-in', component: LoginComponent , canActivate: [AnonGaurd] },
-    { path: 'sign-up', component: RegisterComponent },
-    {path: 'nested-oberable', component: NestedOberableComponent},
-    {path: 'forgot-password', component: ForgotPasswordComponent},
-    {path: 'verify', component: VerificationComponent, canActivate:[AuthGaurd]}
-  ]}
-
-];
+const routes: Routes = [{path: '', canActivate: [AnonGaurd], children: [
+  { path: '', component: LoginComponent},
+  {path: 'forgot-password', component: ForgotPasswordComponent},
+  { path: 'sign-up', component: RegisterComponent}
+]},
+{path: '', canActivate: [AuthGaurd], children: [{
+  path: 'verify', component: VerificationComponent
+}] },
+{path: '', children: [{
+  path: 'event-binding', component: AbcComponent
+},
+{path: 'nested-oberable', component: NestedOberableComponent},
+{path: 'pass-data-using-event', component: PassDataInEventComponent},
+{path: 'two-way', component: TwoWayBindingComponent}]},
+{path: 'home', component: HomeComponent, children:[{
+  path: '', component: InputOutputComponent
+}] }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
