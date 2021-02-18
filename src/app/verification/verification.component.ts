@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-verification',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./verification.component.css']
 })
 export class VerificationComponent implements OnInit {
-
-  constructor() { }
+  email:any = "";
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const params$ = this.activatedRoute.queryParams;
+    params$.subscribe(data=> {
+      console.log(data);
+      this.email  = data.email;
+    })
   }
 
 }
