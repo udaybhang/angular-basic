@@ -17,6 +17,7 @@ import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     RouteAdminComponent,
     LoginComponent,
     NestedOberableComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

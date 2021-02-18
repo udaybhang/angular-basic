@@ -9,7 +9,7 @@ import { AlertService } from './alert.service';
 })
 export class ApiService {
   baseURl: string = "https://jsonplaceholder.typicode.com/todos/111";
-  URL: String = 'http://localhost:3005/api/user';
+  URL: String = 'http://localhost:3006/api/user';
   constructor(private httpClient: HttpClient, private alertService: AlertService, @Inject(PLATFORM_ID) private platformId: any, private router: Router) { }
   get(): Observable<any> {
     // const data = {params: paramData, headers: this.getAuthHeaders()};
