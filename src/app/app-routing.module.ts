@@ -21,7 +21,7 @@ const routes: Routes = [{path: '', canActivate: [AnonGaurd], children: [
 {path: '', canActivate: [AuthGaurd], children: [{
   path: 'verify', component: VerificationComponent
 }] },
-{path: '', children: [{
+{path: 'k', children: [{
   path: 'event-binding', component: AbcComponent
 },
 {path: 'nested-oberable', component: NestedOberableComponent},

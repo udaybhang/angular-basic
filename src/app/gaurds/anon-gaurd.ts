@@ -16,7 +16,9 @@ export class AnonGaurd implements CanActivate {
     const isLoggedIn = isPlatformBrowser(this.platformId) ? !AuthUtil.getAuthToken() : true;
     if (isLoggedIn) {
       return true;
-    } 
+    } else {
+      this.router.navigate(['verify']);
+    }
     // else {
     //   const user$ = this.authRepo.fetchMe();
     //   return user$.pipe(filter(data => !!data), map(data => {
