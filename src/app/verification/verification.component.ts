@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-verification',
@@ -8,12 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VerificationComponent implements OnInit {
   email:any = "";
-  constructor(private activatedRoute: ActivatedRoute) { }
-
+  constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService) { }
+  fetchme() {
+    this.apiService.fetchMe().subscribe(data=>{
+     this.email = data.email;
+    })
+  }
   ngOnInit(): void {
+    this.fetchme();
     const params$ = this.activatedRoute.queryParams;
     params$.subscribe(data=> {
-      console.log(data);
       this.email  = data.email;
     })
   }

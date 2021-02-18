@@ -1,6 +1,6 @@
 import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
-import {AuthUtil} from '../utility/auth-util';
+import { AuthUtil } from "../../app/utility/auth-util";
 import {filter, map} from 'rxjs/operators';
 // import {AuthRepository} from '../repository/auth-repository';
 import {isPlatformBrowser} from '@angular/common';

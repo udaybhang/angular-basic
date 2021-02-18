@@ -4,6 +4,8 @@ import { catchError } from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AlertService } from './alert.service';
+import { isPlatformBrowser } from '@angular/common';
+import { AuthUtil } from "../app/utility/auth-util";
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +26,17 @@ export class ApiService {
   loginAndSetToken(data: { email:string, password: string }): Observable<any> {
     let queryParam = `?email=${data.email}&password=${data.password}`;
       return this.httpClient.get(this.URL + '/login' + queryParam).pipe(catchError(this.errorHandler.bind(this)));
+}
+    getAuthHeaders(): any {
+  if (isPlatformBrowser(this.platformId)) {
+    return {
+      Authorization: `Bearer ${AuthUtil.getAuthToken()}`
+    };
+  }
+}
+fetchMe(): Observable<any> {
+  const data = {headers: this.getAuthHeaders()};
+  return this.httpClient.get(this.URL + '/fetch', data);
 }
 
   private errorHandler(response: any) {
