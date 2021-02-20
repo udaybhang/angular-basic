@@ -19,6 +19,7 @@ import { AlertService } from './alert.service';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerificationComponent } from './verification/verification.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { VerificationComponent } from './verification/verification.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    NgxSpinnerModule,
     FormsModule,
     HttpClientModule
   ],
