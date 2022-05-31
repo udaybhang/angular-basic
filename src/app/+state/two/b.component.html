@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h4 class="modal-title">Raise Exception</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <a href="javascript:void(0)" (click)="openModal(template)">Add Exception</a>
+</div>
+<ng-template #template>
+    <app-c [modalRef]="addExceptionRef" [borrowersInfo]="borrowersInfo"></app-c>
+</ng-template>

@@ -20,6 +20,10 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerificationComponent } from './verification/verification.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AComponent } from './+state/one/a.component';
+import { BComponent } from './+state/two/b.component';
+import { CComponent } from './+state/three/c.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NestedOberableComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    VerificationComponent
+    VerificationComponent,
+    AComponent,
+    BComponent,
+    CComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgbModule,
     NgxSpinnerModule,
     FormsModule,
+    ModalModule.forRoot(),
     HttpClientModule
   ],
   providers: [ApiService, AlertService, AuthGaurd, AnonGaurd],

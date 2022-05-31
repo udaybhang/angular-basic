@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Raise Exception</h4>
+    <button type="button" class="btn-close close pull-right" aria-level="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of borrowersInfo">
+           <td>{{data.name}}</td>
+           <td>{{data.age}}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>

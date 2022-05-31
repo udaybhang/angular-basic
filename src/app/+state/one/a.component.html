@@ -1,0 +1,7 @@
+<div (click)="openModal(template, 'exception')" href="javascript:void(0)">
+Exception
+</div>
+
+<ng-template #template>
+    <app-b [borrowersInfo]="borrowersInfo" [modalRef]="modalRef"></app-b>
+</ng-template>

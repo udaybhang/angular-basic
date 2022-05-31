@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AComponent } from './+state/one/a.component';
 import { AbcComponent } from './abc/abc.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AnonGaurd } from './gaurds/anon-gaurd';
@@ -20,6 +21,9 @@ const routes: Routes = [{path: '', canActivate: [AnonGaurd], children: [
 ]},
 {path: '', canActivate: [AuthGaurd], children: [{
   path: 'verify', component: VerificationComponent
+}] },
+{path: 'dec', children: [{
+  path: '', component: AComponent
 }] },
 {path: 'k', children: [{
   path: 'event-binding', component: AbcComponent
