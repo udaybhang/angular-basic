@@ -14,6 +14,7 @@ export class InputOutputComponent implements OnInit {
   constructor() { }
 
   onClick() {
+    // emit karke yaha se vaha ham bhejte hai
     this.editVideo.emit(this.title);
   }
  

@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  onEdit() {
-    alert('output event fired');
+  onEdit(e:any) {
+    alert('output event fired'+e);
   }
   ngOnInit(): void {
   }
